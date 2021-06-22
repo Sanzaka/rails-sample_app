@@ -1,2 +1,21 @@
 （endとstartをGitに送信するためにファイルの追記が必要みたいなので、
 endを"git push"してから、忘れそうな所を細かくメモすることにします。）
+
+要記憶事項
+1-4{
+@list = List.new
+
+list = List.new
+list.save
+redirect_to "/URL"
+
+<%= form_with model:(インスタンス), url:"(postメソッド)", local:true do |f| %>
+}
+
+
+エラー歴
+1-4{
+parmit => permit
+(:title, :body)
+)
+}
