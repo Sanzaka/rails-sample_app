@@ -3,19 +3,35 @@ endを"git push"してから、忘れそうな所を細かくメモすること�
 
 要記憶事項
 1-4{
-@list = List.new
+  @list = List.new
 
-list = List.new
-list.save
-redirect_to "/URL"
+  list = List.new
+  list.save
+  redirect_to "/URL"
 
-<%= form_with model:(インスタンス), url:"(postメソッド)", local:true do |f| %>
+  <%= form_with model:(インスタンス), url:"(postメソッド)", local:true do |f| %>
 }
 
+1-5{
+  get "URL" => "コントローラ名#アクション名", as:"名前付きルート"
+  ・名前付きルートの利用について
+    get "URL/:id" =>......
+
+    list = モデル名.new(list_params)
+    list.save
+    redirect_to 名前付きルート(list.id)
+
+    @list = モデル名.find(params[:id])
+}
 
 エラー歴
 1-4{
-parmit => permit
-(:title, :body)
-)
+  parmit => permit
+  (:title, :body)
+  )
+}
+
+1-5{
+  get "todolists" =>"todolists#index" as:"todolist"(asの前のカンマ付け忘れ)
+
 }
