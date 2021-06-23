@@ -26,8 +26,14 @@ endを"git push"してから、忘れそうな所を細かくメモすること�
 
 1-6{
   patch "URL" => "コントローラ名#update"
-  
 }
+
+１−７{
+  gemfile   
+    gem "ジェム名"
+    bundle install
+}
+
 
 エラー歴
 1-4{
@@ -43,4 +49,9 @@ endを"git push"してから、忘れそうな所を細かくメモすること�
 1-6{
   form_with model:インスタンス, url"/todolists/#{@list.id}", local:true do |f| %>
   url"/"最初のスラッシュ打ち忘れ
+}
+
+1-7{
+  <%attachment_image_tag 変数, :image, format:"jpeg", size:"100x100"
+  %>の閉じ忘れ
 }
