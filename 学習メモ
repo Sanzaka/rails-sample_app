@@ -24,6 +24,11 @@ endを"git push"してから、忘れそうな所を細かくメモすること�
     @list = モデル名.find(params[:id])
 }
 
+1-6{
+  patch "URL" => "コントローラ名#update"
+  
+}
+
 エラー歴
 1-4{
   parmit => permit
@@ -33,5 +38,9 @@ endを"git push"してから、忘れそうな所を細かくメモすること�
 
 1-5{
   get "todolists" =>"todolists#index" as:"todolist"(asの前のカンマ付け忘れ)
+}
 
+1-6{
+  form_with model:インスタンス, url"/todolists/#{@list.id}", local:true do |f| %>
+  url"/"最初のスラッシュ打ち忘れ
 }
